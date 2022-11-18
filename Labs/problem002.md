@@ -20,9 +20,10 @@ Czas ten należy wyznaczyć dla obrazków o bokach 16, 32, 64, 128, 256, 512, 10
 i nie w ROOT). Przetestujcie oba powyższe podejścia, przy czym w przypadku pierwszego (czyste wątki)
 czas tworzenia wątków ma być uwzględniony w czasie wykonania programu (funkcja generująca obrazek
 przy każdym wywołaniu tworzy wątki i jest to uwzględniane w uśrednianiu). Natomiast testując drugie
-podejście, pulę wątków twórzcie tylko raz i podczas generowania obrazków (niezbędnego do stworzenia
-wykresów i porównania czasów) wykorzystujecie ciągle tę samą pulę, której czas jest/nie jest
-uwzględniany podczas uśredniania (dwa warianty).
+podejście, pulę wątków, przetestujcie dwie opcje. Na początku twórzcie pulę tylko raz i podczas generowania obrazków
+(niezbędnego do stworzenia wykresów i porównania czasów) wykorzystujecie ciągle tę samą pulę, której czas tworzenia
+nie jest uwzględniany podczas uśredniania. Potem powtórzcie testy, ale tym razem tworząc podczas
+uśredniania nową pulę za każdym razem i wliczajcie jej czas tworzenia do średniej.
 
 Zbadajcie do tego, jak w przypadku puli będzie zmieniał się czas wykonania w zależności od tego, jak
 podzielicie obrazek na joby do wykonania. Sprawdźcie, jak będzie wyglądał ten czas (za każdym razem w
